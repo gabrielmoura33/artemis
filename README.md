@@ -27,7 +27,7 @@ Além disso, o sistema terá uma importante função social, disponibilizando in
 ## 🎨 Layout
 
 <p align="center">
-    <img alt="Artemis" title="#Artemis" src="/Design/Capa.png"/>
+    <img alt="Artemis" title="#Artemis" src="/Design/capa.png"/>
 </p>
 
 <!--
