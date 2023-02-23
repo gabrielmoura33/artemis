@@ -1,0 +1,89 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Status {
+  PENDING
+  APPROVED
+  FINISHED
+}
+
+model Donation {
+  id     String @id @default(uuid())
+  status Status @default(PENDING)
+  value  Float
+
+  description String
+  donator     Donators @relation(fields: [donatorsId], references: [id])
+  donatorsId  String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+
+
+  @@map("donations")
+}
+
+enum DonatorGender {
+  F
+  M
+  U
+}
+
+model Donators {
+  id       String         @id @default(uuid())
+  name     String?
+  age      Int?
+  cpf      String?
+  gender   DonatorGender?
+  Donation Donation[]
+
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+  @@map("donators")
+}
+
+model User {
+  id            String  @id @default(uuid())
+  firebaseId    String? @unique
+  firebaseOngId String  @unique
+
+  name       String
+  email      String
+  birth_date DateTime
+
+  cpf       String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+
+  @@map("users")
+}
+
+enum EntryType {
+  INCOME
+  OUTCOME
+}
+
+model Entry {
+  id            String    @id @default(uuid())
+  type          EntryType
+  firebaseOngId String
+  description   String?
+  date          DateTime  @default(now())
+
+  value Float
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+
+  @@map("entries")
+}

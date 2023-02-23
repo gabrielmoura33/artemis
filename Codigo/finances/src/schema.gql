@@ -1,0 +1,93 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+directive @key(fields: String!) on OBJECT | INTERFACE
+
+directive @extends on OBJECT | INTERFACE
+
+directive @external on OBJECT | FIELD_DEFINITION
+
+directive @requires(fields: String!) on FIELD_DEFINITION
+
+directive @provides(fields: String!) on FIELD_DEFINITION
+
+type Donator {
+  id: ID!
+  name: String!
+  cpf: String!
+  age: Float!
+}
+
+type Donation {
+  id: ID!
+  status: DonationStatus!
+  value: Float!
+  description: String!
+  createdAt: DateTime!
+  donators: [Donator!]!
+  donator: Donator!
+}
+
+"""Available donation status"""
+enum DonationStatus {
+  PENDING
+  APPROVED
+  FAILED
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Entry {
+  id: ID!
+  type: String!
+  firebaseOngId: String!
+  description: String!
+  date: DateTime!
+  value: Float!
+}
+
+type Query {
+  donations: [Donation!]!
+  entries: [Entry!]!
+  entry(firebaseID: String!): [Entry!]!
+}
+
+type Mutation {
+  createDonnation(data: CreateDonationDto!): Donation!
+  updateDonation(updateAnimalInput: UpdateDonationDto!): Donation!
+  removeDonation(id: String!): Donation!
+  createEntry(createEntryInput: CreateEntryInput!): Entry!
+  updateEntry(updateEntryInput: UpdateEntryInput!): Entry!
+  removeEntry(id: String!): Entry!
+}
+
+input CreateDonationDto {
+  value: Float!
+  description: String!
+  donatorsName: String!
+}
+
+input UpdateDonationDto {
+  id: String!
+}
+
+input CreateEntryInput {
+  type: String!
+  firebaseOngId: String!
+  description: String!
+  value: Float!
+  date: DateTime
+}
+
+input UpdateEntryInput {
+  type: String
+  firebaseOngId: String
+  description: String
+  value: Float
+  date: DateTime
+  id: String!
+}

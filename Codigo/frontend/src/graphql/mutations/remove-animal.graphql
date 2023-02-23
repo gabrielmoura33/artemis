@@ -1,0 +1,5 @@
+mutation RemoveAnimal($id: String!) {
+  removeAnimal(id: $id) {
+    id
+  }
+}

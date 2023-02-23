@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "artemis-mobile-7905c",
+  "private_key_id": "6a162659a532163f85a3481919057c116d7e27af",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCwnzJTXf4dAFMR\n4SHpReVoWWCBRsx8orhGo2C+teB+HahTZuXZ5ikf2pEMwFVjCJgTqbXVSgQvb3+1\nGqZxNLXrOh9CwYtqYVooSHAj6vCBGXqxtJV+nIyCn+NknVp/01c4dkja7HdH+D80\n+RChXcB92PFARIjC4GefSp8MAAf7p/mv5m3jZ631+w/gmCD1NKqFduYg/DQwzwVP\nFTujXSyaFypDPc4EXTxLmMFriQ9n9zo3rFxbVn33UDKlzaoPzncg/2DwZES/fF4v\n3wj5Tw4irm9G9cOBsFCjFz0nvNxfmQ9GH3BsSoNNJM3H7QDdrFNEIDjKoOQl8HxX\npDKVqRffAgMBAAECggEAJLZqmQ6cD/4txjUkPd9kAI03dJe5UJzoLfKu3OVkTQKw\nJunoFCN13+OoK9zcwtGZ/thTbgrNFOkZxBTOjRB2UfdKYS9m4c1rlpz8BlNC+6rG\nqKKPQnqa8Fn4w8S7d3+ADUH1AeCOKL0Osl2lGc2pgd8ywnecb9mCYId7yNxGzIW0\njHUucWS/CYR1USvWuoBMOOQqCjkgL2YDCEU3DeNT8LuhomRbANfBQ6wrQQQmSqYG\nZG8lo84QP3TQo3GTGYjTF+RuYzhalnDPJ4uhX0mnDAF6egNiF6j/hrWKy9+DWa8e\nbA1UkDnTIVofnGpbiFrYuMRXtUF6Sdl+p8GseV+UiQKBgQDsD9N89A7V+RcUVWFz\nxdkiDCVktJZI9AtOLpnstktzdFNavQiAhwkBG4n2NEEiHkzP4ZvNoG0RfhIj8Cjp\nH0M603M8zRxgB4POWvZHZ4xx0eix3OKTtcUTjoeuSjbwmZSRwZSvI46bgn3qcxmM\nGFbp34THRpcFfuDZL/BTQayYlwKBgQC/iiX2Aet5FymXyB3wKgxWaqv7qTUUPfRB\n7CsTyMiC2HrJJM6kPbsGGbb/Ng1HgTD/JRdBcnaQN2lMDXdNp8WG/UjSRm10J+HB\nY9uhk6hjjMuE1wIJX+X0VLUdWeeLI5q+RfVcwyZqDraeM9/BuzTv2cuvH/vvLwwY\nSJyEuC1b+QKBgF/m+hOcj15sqOyw1zuSmGkVqCdmmlufEey8T/p0AOkxzB9kBs04\njvbtOjpU9lUnHCukS4jZcRYXMsV47xXuhoCioQGFjs6QnwK5v644qj0fezqvMzmx\nMhSE5ihvrCxJKKuiioYwmuIgvIkAI9Pfm4e+MBJJYldwOWbi6+7XEoiXAoGAIcGZ\nGxgPhdG9NNDB5fejIP+/u6SAhEa+63dRyDTUkarRSO3BtVRjx5l0lNnT0UxFdFH3\nHUOs/ZGmbw7YfckZmMa+tMBQve3hbZHJvVomjRTdMVYrN7e88SiUms2jbvQha3Ms\n4OJLvNlG+e6uepghpju+F+kNH4QtH4J8gy9qXxECgYEAvTFuPEuNAdl8cjTKACyM\nhQRIVncpdL1cKeyntjf1h3ZYhHY4AU8eacDZmZi2aY6wyCpIeAGvrabGElOcbYe+\n1BQ1xYeSfkfL1JW3Np9z0GE3F1jVnGEeZVf31Y19iBBVTQJjd6xEAITSb/MwdZvm\nDCUK+II1YGv5hPQdZpCCsI4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-awtbu@artemis-mobile-7905c.iam.gserviceaccount.com",
+  "client_id": "102192693071632906848",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-awtbu%40artemis-mobile-7905c.iam.gserviceaccount.com"
+}

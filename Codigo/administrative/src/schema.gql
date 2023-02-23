@@ -1,0 +1,178 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+directive @key(fields: String!) on OBJECT | INTERFACE
+
+directive @extends on OBJECT | INTERFACE
+
+directive @external on OBJECT | FIELD_DEFINITION
+
+directive @requires(fields: String!) on FIELD_DEFINITION
+
+directive @provides(fields: String!) on FIELD_DEFINITION
+
+type Ong {
+  id: ID!
+  name: String!
+  firebaseId: String!
+  whatsapp: String!
+  email: String!
+  city: String!
+  region: String!
+}
+
+type AnimalsPhotoEntity {
+  url: String!
+  id: String!
+  animalId: String!
+}
+
+type Animal {
+  id: ID!
+  name: String!
+  breed: String!
+  gender: String!
+  birth_date: DateTime!
+  type: String!
+  comments: String!
+  available_for_adoption: Boolean!
+  clientId: String
+  ongId: String!
+  adopted_by: Client!
+  ong: Ong!
+  photos: [AnimalsPhotoEntity!]!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Client {
+  id: ID!
+  name: String!
+  age: Float!
+  cpf: String!
+  gender: String!
+}
+
+type User {
+  id: String!
+  firebaseId: String!
+  firebaseOngId: String!
+  name: String!
+  email: String!
+  birth_date: DateTime!
+  cpf: String!
+  Animal: [Animal!]!
+  work_on: Ong!
+}
+
+type Query {
+  ongs: [Ong!]!
+  me: Ong!
+  animals: [Animal!]!
+  animals_availables: [Animal!]!
+  animal(id: String!): Animal!
+  clients: [Client!]!
+  client(id: String!): Client!
+  users: [User!]!
+  user(id: String!): User!
+}
+
+type Mutation {
+  createOng(createOngInput: CreateOngInput!): Ong!
+  createAnimal(createAnimalInput: CreateAnimalInput!): Animal!
+  updateAnimal(updateAnimalInput: UpdateAnimalInput!): Animal!
+  removeAnimal(id: String!): Animal!
+  adoptAnimal(data: IAdoptAnimalData!): Animal!
+  uploadFile(file: Upload!): Boolean!
+  createClient(createClientInput: CreateClientInput!): Client!
+  updateClient(updateClientInput: UpdateClientInput!): Client!
+  removeClient(id: String!): Client!
+  createUser(createUserInput: CreateUserInput!): User!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+  removeUser(id: Int!): User!
+}
+
+input CreateOngInput {
+  name: String!
+  email: String!
+  whatsapp: String!
+  city: String!
+  region: String!
+}
+
+input CreateAnimalInput {
+  name: String!
+  breed: String!
+  gender: String!
+  birth_date: DateTime!
+  type: String!
+  comments: String!
+  available_for_adoption: Boolean = true
+  clientId: String
+  ongId: String
+  photos: [AnimalsPhotoInput!]
+}
+
+input AnimalsPhotoInput {
+  url: String!
+}
+
+input UpdateAnimalInput {
+  name: String
+  breed: String
+  gender: String
+  birth_date: DateTime
+  type: String
+  comments: String
+  available_for_adoption: Boolean = true
+  clientId: String
+  ongId: String
+  photos: [AnimalsPhotoInput!]
+  id: String!
+}
+
+input IAdoptAnimalData {
+  clientId: String!
+  id: String!
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
+
+input CreateClientInput {
+  name: String!
+  age: Float!
+  cpf: String!
+  gender: String!
+}
+
+input UpdateClientInput {
+  name: String
+  age: Float
+  cpf: String
+  gender: String
+  id: ID!
+}
+
+input CreateUserInput {
+  name: String!
+  email: String!
+  birth_date: DateTime!
+  cpf: String
+  ongId: String!
+  firebaseId: String!
+}
+
+input UpdateUserInput {
+  name: String
+  email: String
+  birth_date: DateTime
+  cpf: String
+  ongId: String
+  firebaseId: String
+  id: Int!
+}

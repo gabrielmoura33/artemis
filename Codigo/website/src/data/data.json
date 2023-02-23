@@ -1,0 +1,56 @@
+{
+  "Header": {
+    "title": "Toda vida importa!",
+    "paragraph": ""
+  },
+  "About": {
+    "paragraph": "O Instituto Sammy Aram é um projeto de um grupo de protetores e ambientalistas voluntários unidos pela causa animal e ambiental. Este Projeto nasceu em março de 2020, porem todos os voluntários já estavam em outros projetos há alguns anos. Por ser tratar de um projeto sem fins lucrativos, todas as etapas são de suma importância, cada qual a seu tempo. Temos por foco resgatar, levar a atendimento veterinário, fazer os exames,  tratar se necessário, castrar e encaminhar a adoção responsável através de entrevistas e assinatura de termo de adoção.",
+    "Why": [
+      "A nossa missão é criar um mundo mais justo para todo tipo de vida, salvar e garantir a continuidade da vida de animais domésticos abandonados, trabalhar pela preservação das florestas e recuperar áreas degradadas."
+    ],
+    "Why2":[
+      "Nossos valores são transparência, honestidade, respeito ao próximo, respeito e amor aos animais e ao meio ambiente, integridade e ética.",
+      "A nossa visão é ser a instituição referencia  do resgate de animal até o encaminhamento do mesmo para adoção e garantir sua  qualidade de vida, e conseguir implantar a recuperação dos corredores ecológicos em nossa região."
+    ]
+  },
+  "Doacao": {
+    "paragraph": "Todas as etapas são necessárias ajuda de varias formas, um lar solidário, doação de ração, alimentação especial em alguns casos, transporte, financeiro para custear tratamentos e despesas, remédios, farmácia solidaria, vacinas, roupas cirúrgicas, ação de mutirão, etc.",
+    "Why": [
+      "Pix: 123456789-90"
+    ],
+    "Why2":[
+      "Banco: Itaú",
+      "Agência: 0001", 
+      "Conta: 00012345-6",
+      "Titular: Sammy Aram"]
+  },
+  "AnimaisDispoiveis": [
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    }
+  ],
+  "PrestacaoContas": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "INSERIR COMPONENTE PRO FEED AQUI",
+      "name": ""
+    }
+  ],
+  "Contact": {
+    "address": "Rua 1, nº 356, Centro, Belo Horizonte, MG",
+    "phone": "31 91234 5678",
+    "email": "sammyaram@gmail.com"
+  }
+}

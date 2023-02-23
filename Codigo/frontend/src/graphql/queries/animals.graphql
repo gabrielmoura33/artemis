@@ -1,0 +1,12 @@
+query GetAnimals {
+  animals {
+    id
+    breed
+    gender
+    name
+    comments
+    available_for_adoption
+    birth_date
+    type
+  }
+}

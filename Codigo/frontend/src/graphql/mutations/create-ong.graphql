@@ -1,0 +1,19 @@
+mutation CreateOng(
+  $city: String!
+  $email: String!
+  $name: String!
+  $region: String!
+  $whatsapp: String!
+) {
+  createOng(
+    createOngInput: {
+      city: $city
+      email: $email
+      name: $name
+      region: $region
+      whatsapp: $whatsapp
+    }
+  ) {
+    id
+  }
+}

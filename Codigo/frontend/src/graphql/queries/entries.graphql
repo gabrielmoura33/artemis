@@ -1,0 +1,11 @@
+query GetEntries($firebaseId: String!) {
+  entry(firebaseID: $firebaseId) {
+    id
+    value
+    date
+    firebaseOngId
+    type
+    value
+    description
+  }
+}

@@ -1,0 +1,26 @@
+mutation CreateAnimal(
+  $name: String!
+  $breed: String!
+  $gender: String!
+  $birth_date: DateTime!
+  $type: String!
+  $comments: String!
+  $ongId: String!
+  $photos: [AnimalsPhotoInput!]
+) {
+  createAnimal(
+    createAnimalInput: {
+      name: $name
+      breed: $breed
+      gender: $gender
+      birth_date: $birth_date
+      type: $type
+      comments: $comments
+      ongId: $ongId
+      photos: $photos
+    }
+  ) {
+    name
+    id
+  }
+}

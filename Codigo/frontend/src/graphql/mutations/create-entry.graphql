@@ -1,0 +1,20 @@
+mutation CreateEntry(
+  $date: DateTime!
+  $description: String!
+  $firebaseOngId: String!
+  $value: Float!
+  $type: String!
+) {
+  createEntry(
+    createEntryInput: {
+      date: $date
+      description: $description
+      firebaseOngId: $firebaseOngId
+      value: $value
+      type: $type
+    }
+  ) {
+    id
+    description
+  }
+}

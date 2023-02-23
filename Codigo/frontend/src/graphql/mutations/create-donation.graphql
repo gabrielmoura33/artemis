@@ -1,0 +1,16 @@
+mutation CreateDonation(
+  $description: String!
+  $value: Float!
+  $donatorsName: String!
+) {
+  createDonnation(
+    data: {
+      description: $description
+      value: $value
+      donatorsName: $donatorsName
+    }
+  ) {
+    id
+    description
+  }
+}

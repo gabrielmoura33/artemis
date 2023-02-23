@@ -1,0 +1,110 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Gender {
+  M
+  F
+  U
+}
+
+model Animal {
+  id                     String   @id @default(uuid())
+  name                   String   @unique
+  breed                  String?
+  gender                 Gender   @default(U)
+  birth_date             DateTime
+  type                   String
+  comments               String   @db.Text
+  available_for_adoption Boolean  @default(true)
+
+  clientId   String?
+  adopted_by Client? @relation(fields: [clientId], references: [id])
+
+
+  ongId String
+  Ong   Ong    @relation(fields: [ongId], references: [id])
+
+  userId    String?
+  createdBy User?   @relation(fields: [userId], references: [id])
+
+
+  photos AnimalPhoto[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+  @@map("animals")
+}
+
+model Ong {
+  id         String  @id @default(uuid())
+  name       String
+  firebaseId String  @unique
+  whatsapp   String
+  city       String?
+  region     String?
+
+  email String
+
+
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+
+
+  Animal Animal[]
+  User   User[]
+  @@map("ongs")
+}
+
+model Client {
+  id     String  @id @default(uuid())
+  name   String?
+  age    Int?
+  cpf    String?
+  gender Gender  @default(U)
+
+
+  animalsAdopted Animal[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+  @@map("clients")
+}
+
+model User {
+  id            String  @id @default(uuid())
+  firebaseId    String? @unique
+  firebaseOngId String  @unique
+
+  name       String
+  email      String
+  birth_date DateTime
+
+  cpf       String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+
+  ongId  String?
+  Animal Animal[]
+  Ong    Ong?     @relation(fields: [ongId], references: [id])
+
+  @@map("users")
+}
+
+model AnimalPhoto {
+  id  String @id @default(uuid())
+  url String
+
+  Animal   Animal? @relation(fields: [animalId], references: [id])
+  animalId String?
+  @@map("animal_photos")
+}

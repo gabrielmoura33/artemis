@@ -1,0 +1,5 @@
+mutation RemoveDonation($id: String!) {
+  removeDonation(id: $id) {
+    id
+  }
+}

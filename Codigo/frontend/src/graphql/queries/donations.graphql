@@ -1,0 +1,13 @@
+query GetDonations {
+  donations {
+    id
+    value
+    description
+    status
+    createdAt
+    donator {
+      id
+      name
+    }
+  }
+}
