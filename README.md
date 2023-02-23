@@ -24,12 +24,6 @@ O projeto **Artemis** tem como objetivo desenvolver um eficiente sistema de gest
 
 Além disso, o sistema terá uma importante função social, disponibilizando informações sobre animais que se encontram sob os cuidados da ONG e que estão disponíveis para adoção. O sistema será de fácil uso e navegabilidade, oferecendo ao usuário uma experiência positiva e intuitiva, além de facilitar a divulgação e acesso às informações da ONG em **tempo real**.
 
-# :artificial_satellite: Modelagem e projeto arquitetural
-
-O diagrama abaixo refere-se a solução arquitetural que desenvolvemos para o projeto, a arquitetura consistirá em um cliente web e um cliente mobile que devem se comunicar através de chamadas HTTP a um serviço principal. Em simultâneo este mesmo serviço deverá comunicar-se através do Apache Kafka com outros dois serviços, um responsável pela localização dos animais adotados e/ou para adoção e outro responsável pela notificação dos e-mail aos usuários da plataforma.
-
-![Visão Geral da Solução](./Arquitetura/arquitetura.png "Visão Geral da Solução")
-
 ## 🎨 Layout
 
 <p align="center">
